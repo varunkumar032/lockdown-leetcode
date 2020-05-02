@@ -26,6 +26,3 @@ def firstBadVersion(n):
             low = mid+1
     return low
 
-print(firstBadVersion(5))
-
-

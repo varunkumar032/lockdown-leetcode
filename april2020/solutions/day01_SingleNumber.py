@@ -12,4 +12,9 @@ from functools import reduce
 def singleNumber(nums):
     return reduce(lambda x, y:x^y, nums)
 
-print(singleNumber([7,1,2,1,2]))
+# Alternate Solution:
+# def singleNumber(nums):
+#     result = 0
+#     for x in nums:
+#         result ^= x
+#     return result
