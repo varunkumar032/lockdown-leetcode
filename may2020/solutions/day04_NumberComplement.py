@@ -9,7 +9,7 @@
 def bitwiseComplement(num):
     return int('1'*len(bin(num).replace('0b', '')), 2) ^ num
 
-# Alternate Solution
+# Alternate Solution:
 # def bitwiseComplement(num):
 #     temp = num
 #     bit = 1

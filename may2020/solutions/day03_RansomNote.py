@@ -11,7 +11,7 @@ def canConstruct(ransomNote, magazine):
             return False
     return True
 
-# Alternate solution
+# Alternate solution:
 # from collections import Counter
 # def canConstruct(ransomNote, magazine):
 #     ransomNoteCount = Counter(ransomNote)

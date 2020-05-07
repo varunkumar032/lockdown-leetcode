@@ -13,9 +13,10 @@ def numJewelsInStones(J, S):
             count += 1
     return count
 
-# Alternate solutions:
+# Alternate Solution:
 # def numJewelsInStones(J, S):
 #     return sum(map(lambda x: x in J, S))
 
+# Alternate Solution:
 # def numJewelsInStones(J, S):
 #     return len([x for x in S if x in J])

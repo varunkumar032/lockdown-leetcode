@@ -18,7 +18,7 @@ def firstUniqChar(s):
             return i
     return -1
 
-# Alternate solution:
+# Alternate Solution:
 # from collections import Counter
 # def firstUniqChar(s):
 #     countDict = Counter(s)
