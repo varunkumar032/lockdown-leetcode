@@ -18,7 +18,7 @@ def groupAnagrams(strs):
             strDict[sortedStr] = [string]
     return list(strDict.values())
 
-# Alternate solution
+# Alternate Solution:
 # from collections import defaultdict
 # def groupAnagrams(strs):
 #     strDict = defaultdict(list)
