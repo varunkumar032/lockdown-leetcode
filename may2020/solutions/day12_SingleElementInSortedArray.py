@@ -20,14 +20,12 @@ def singleNonDuplicate(nums):
             elif nums[mid] == nums[mid-1]:
                 high = mid-2
             else:
-                return nums[mid]
+                return nums[mid]        # This is because the index of the single element is always even
         else:
             if nums[mid] == nums[mid+1]:
                 high = mid-1
             elif nums[mid] == nums[mid-1]:
                 low = mid+1
-            else:
-                return nums[mid]
     return nums[low]
 
 # Alternate Solution:
