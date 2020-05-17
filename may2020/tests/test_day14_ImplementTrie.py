@@ -1,13 +1,5 @@
 from solutions.day14_ImplementTrie import TreeNode, Trie
 
-# Trie trie = new Trie();
-# trie.insert("apple");
-# trie.search("apple");   // returns true
-# trie.search("app");     // returns false
-# trie.startsWith("app"); // returns true
-# trie.insert("app");
-# trie.search("app");     // returns true
-
 def test_day14_01():
     trie = Trie()
     trie.insert("apple")
