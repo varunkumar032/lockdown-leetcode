@@ -5,7 +5,6 @@ def listOfNodeVals(head):
     while head:
         listOfNodeVals.append(head.val)
         head = head.next
-    print(listOfNodeVals)
     return listOfNodeVals
 
 def test_day08_01():
