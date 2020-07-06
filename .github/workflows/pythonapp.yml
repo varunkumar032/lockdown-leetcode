@@ -36,3 +36,4 @@ jobs:
         pytest -v april2020
         pytest -v may2020
         pytest -v june2020
+        pytest -v july2020
