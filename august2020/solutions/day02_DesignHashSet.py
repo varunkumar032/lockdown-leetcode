@@ -19,15 +19,24 @@
 
 class MyHashSet:
     def __init__(self):
-        self.hashset = {}
+        self.numBuckets = 15000
+        self.buckets = [[] for _ in range(self.numBuckets)]
 
-    def add(self, key: int) -> None:
-        if not self.contains(key):
-            self.hashset[key] = 1
+    def hash_function(self, key):
+        return key % self.numBuckets
 
-    def remove(self, key: int) -> None:
-        if self.contains(key):
-            del self.hashset[key]
+    def add(self, key):
+        i = self.hash_function(key)
+        if not key in self.buckets[i]:
+            self.buckets[i].append(key)
 
-    def contains(self, key: int) -> bool:
-        return key in self.hashset
+    def remove(self, key):
+        i = self.hash_function(key)
+        if key in self.buckets[i]:
+            self.buckets[i].remove(key)
+
+    def contains(self, key):
+        i = self.hash_function(key)
+        if key in self.buckets[i]:
+            return True
+        return False
