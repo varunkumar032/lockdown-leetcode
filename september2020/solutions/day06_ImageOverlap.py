@@ -18,18 +18,35 @@
 # Explanation: We slide A to right by 1 unit and down by 1 unit.
 
 def largestOverlap(A, B):
-    maxOverlap = 0
-    for row in range(-len(A)+1, len(A)):
-        for col in range(-len(A)+1, len(A)):
-            maxOverlap = max(maxOverlap, overlap(A, B, row, col))
-    return maxOverlap
+    def overlap(A, B):
+        count = 0
+        rows = len(A)
+        cols = len(A[0])
+        for row in range(rows):
+            for col in range(cols):
+                temp = 0
+                for r in range(row, rows):
+                    for c in range(col, cols):
+                        if A[r][c] and B[r-row][c-col]:
+                            temp += 1
+                count = max(count, temp)
+        return count
+    return max(overlap(A, B), overlap(B, A))
 
-def overlap(A, B, rowOff, colOff):
-    count = 0
-    for row in range(len(A)):
-        for col in range(len(A)):
-            if (row+rowOff<0 or row+rowOff>=len(A)) or (col+colOff<0 or col+colOff>=len(A)):
-                continue
-            if (A[row][col] + B[row+rowOff][col+colOff] == 2):
-                count += 1
-    return count
+# Alternate Solution:
+# def largestOverlap(A, B):
+#     maxOverlap = 0
+#     for row in range(-len(A)+1, len(A)):
+#         for col in range(-len(A)+1, len(A)):
+#             maxOverlap = max(maxOverlap, overlap(A, B, row, col))
+#     return maxOverlap
+
+# def overlap(A, B, rowOff, colOff):
+#     count = 0
+#     for row in range(len(A)):
+#         for col in range(len(A)):
+#             if (row+rowOff<0 or row+rowOff>=len(A)) or (col+colOff<0 or col+colOff>=len(A)):
+#                 continue
+#             if (A[row][col] + B[row+rowOff][col+colOff] == 2):
+#                 count += 1
+#     return count
