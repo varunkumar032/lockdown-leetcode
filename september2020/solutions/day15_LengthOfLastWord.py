@@ -11,3 +11,7 @@
 def lengthOfLastWord(s):
     wordList = s.split()
     return len(wordList[-1]) if len(wordList) else 0
+
+# Alternate Solution:
+# def lengthOfLastWord(s):
+#     return len(s.strip().split(" ")[-1])
