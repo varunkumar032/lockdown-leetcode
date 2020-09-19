@@ -21,3 +21,16 @@ def subsets(nums):
 	for num in nums:
 		output += [current + [num] for current in output]
 	return output
+
+# Alternate Solution:
+# import copy
+
+# def subsets(nums):
+#     if len(nums) == 0:
+#         return [[]]
+#     temp = subsets(nums[1:])
+#     result = copy.deepcopy(temp)
+#     for i in range(len(temp)):
+#         temp[i].append(nums[0])
+#         result.append(temp[i])
+#     return result
