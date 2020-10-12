@@ -1,4 +1,4 @@
-from solutions.q01_twoSum import twoSum
+from solutions.q_01_TwoSum import twoSum
 
 def test_01():
     test_nums = [2,7,11,15]

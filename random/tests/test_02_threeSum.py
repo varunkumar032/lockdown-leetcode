@@ -1,4 +1,4 @@
-from solutions.q02_threeSum import threeSum
+from solutions.q_02_ThreeSum import threeSum
 
 def test_01():
     test_nums = [-1,0,1,2,-1,-4]
