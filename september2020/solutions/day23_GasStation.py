@@ -48,6 +48,7 @@ def canCompleteCircuit(gas, cost):
             gasLeft = 0
     return -1 if total<0 else startIndex
 
+
 # Alternate Solution:
 # def canCompleteCircuit(gas, cost):
 #     n = len(gas)
@@ -64,3 +65,33 @@ def canCompleteCircuit(gas, cost):
 #         if gasLeft >= 0 and count == n:
 #             return i
 #     return -1
+
+
+# Alternate Solution:
+# def canCompleteCircuit(gas, cost):
+# 	n = len(gas)
+# 	count = n
+# 	i = 0
+# 	j = 0
+# 	fuel = 0
+# 	while i < n:
+# 		if fuel+gas[i] >= cost[i]:
+# 			fuel += gas[i]-cost[i]
+# 			i = i+1
+# 			continue
+# 		fuel = 0
+# 		i += 1
+# 		j = i
+# 	if j == n:
+# 		return -1
+# 	# Round Trip
+# 	fuel = 0
+# 	i = j
+# 	while count:
+# 		if fuel+gas[i] >= cost[i]:
+# 			fuel += gas[i]-cost[i]
+# 			i = (i+1)%n
+# 		else:
+# 			return -1
+# 		count -= 1
+# 	return j
