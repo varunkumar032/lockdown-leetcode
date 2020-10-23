@@ -29,3 +29,19 @@ def minDepth(root):
 	if not root.left:
 		return 1 + minDepth(root.right)
 	return 1 + min(minDepth(root.left), minDepth(root.right))
+
+# Alternate Solution:
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+# def minDepth(root):
+#     def dfs(node):
+#         if not node: return float("inf")
+#         if not node.left and not node.right: return 1
+#         return min(dfs(node.left), dfs(node.right)) + 1
+#     res = dfs(root)
+#     return res if res != float("inf") else 0
