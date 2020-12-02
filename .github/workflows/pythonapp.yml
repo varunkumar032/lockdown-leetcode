@@ -41,4 +41,5 @@ jobs:
         pytest -v september2020
         pytest -v october2020
         pytest -v november2020
+        pytest -v december2020
         pytest -v random
