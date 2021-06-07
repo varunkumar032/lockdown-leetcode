@@ -23,3 +23,22 @@ def longestConsecutive(nums):
 				nextNum += 1
 			maxLen = max(maxLen, currLen)
 	return maxLen
+
+# Alternate Solution:
+# def longestConsecutive(nums):
+# 	numDict = {num:index for index, num in enumerate(nums)}
+# 	maxLen = 0
+# 	for num in nums:
+# 		left = num - 1
+# 		right = num + 1
+# 		currLen = 1
+# 		while left in numDict:
+# 			currLen += 1
+# 			del numDict[left]
+# 			left -= 1
+# 		while right in numDict:
+# 			currLen += 1
+# 			del numDict[right]
+# 			right += 1
+# 		maxLen = max(maxLen, currLen)
+# 	return maxLen
